@@ -1,4 +1,6 @@
-a = [1, 5, "Good", "Bad"]
-b = [9, "Blue", "Red", 11]
-
-print(a[1] + b[3], a[2] + b[2], a[0] * b[0], a[1] ** b[3], a + b, sep="\n")
+num = int(input())
+a, b = 1, 1
+for _ in range(2, num + 1):
+    print(a, end=" ")
+    a, b = b, a + b
+print(b)

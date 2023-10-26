@@ -1,1 +1,2 @@
-print("Hello, World!", "Маша + Петя = Любовь", "x = 3 + 4", "x = 7", sep="\n")
+num = int(input())
+print("Четное" if num % 2 == 0 else "Нечетное")

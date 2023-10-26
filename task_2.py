@@ -1,4 +1,2 @@
-[
-    print(type(el), end="\n")
-    for el in ["Hello, World!", 3 + 4, 3 / 4, [1, 2, 5, 10, 100]]
-]
+b1, q, n = map(int, input().split())
+print(*[b1 * q ** (i - 1) for i in range(1, n + 1)], sep="\n")
