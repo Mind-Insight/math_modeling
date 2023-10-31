@@ -1,8 +1,18 @@
-a, b, c = map(int, input().split())
-D = b**2 - 4 * a * c
-if D == 0:
-    print(-b / 2 * a)
-elif D > 0:
-    print((-b + D**0.5) / 2 * a, (-b - D**0.5) / 2 * a, sep="\n")
-elif D < 0:
-    print("Нет действительных корней")
+import numpy as np
+
+
+arr = np.zeros(5)
+for i in range(4):
+    arr[i] = int(input())
+
+new_el, ind = map(
+    int,
+    input(
+        (
+            "Введите значение которое хотите вставить в массив "
+            "и его индекс через пробел: "
+        )
+    ).split(),
+)
+arr = np.insert(arr, ind, new_el)
+print(arr)

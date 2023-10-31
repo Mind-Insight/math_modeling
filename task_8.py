@@ -1,10 +1,12 @@
-a, b, c = map(int, input().split())
-if a + b > c and a + c > b and b + c > a:
-    if (a == b and a != c) or (a == c and a != b) or (b == c and b != a):
-        print("Треугольник равнобедренный")
-    elif a != b != c:
-        print("Треугольник разносторонний")
-    else:
-        print("Треугольник равносторонний")
-else:
-    print("Такого треугольника не существует")
+import numpy as np
+
+rows, cols = map(int, input().split())
+arr = np.zeros((rows, cols))
+
+print("Заполните массив: ")
+for i in range(rows):
+    for j in range(cols):
+        arr[i, j] = int(input())
+
+max_elements = np.max(arr, axis=0)
+print(max_elements)
